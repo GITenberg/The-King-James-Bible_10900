@@ -1,0 +1,17 @@
+_repo: The-King-James-Bible_10900
+_version: 0.0.1
+description: ''
+gutenberg_issued: '2004-01-01'
+gutenberg_type: Text
+identifiers:
+  gutenberg: '10900'
+language: en
+publisher: Project Gutenberg
+rights: Public domain in the USA.
+rights_url: http://creativecommons.org/about/pdm
+subjects:
+- !lcsh 'Bible'
+- !lcc 'BS'
+- GITenberg
+title: The King James Bible
+url: http://www.gutenberg.org/ebooks/10900
