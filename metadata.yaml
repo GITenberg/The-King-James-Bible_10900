@@ -1,6 +1,11 @@
 _repo: The-King-James-Bible_10900
-_version: 0.0.1
+_version: 0.1.0
+covers:
+- cover_type: generated
+  image_path: cover.png
 description: ''
+edition_identifiers:
+  edition_id: http://www.gutenberg.org/ebooks/10900#The-King-James-Bible
 gutenberg_issued: '2004-01-01'
 gutenberg_type: Text
 identifiers:
