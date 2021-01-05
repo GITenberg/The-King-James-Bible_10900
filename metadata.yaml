@@ -1,5 +1,5 @@
 _repo: The-King-James-Bible_10900
-_version: 0.1.0
+_version: 0.1.1
 covers:
 - cover_type: generated
   image_path: cover.png
