@@ -1,0 +1,51 @@
+---
+title: The King James Bible
+author: Various
+papersize: letter
+## Enable the QTCloisteredMonk font for a cool medieval look :)
+#mainfont: QTCloisteredMonk.otf
+#sansfont: QTCloisteredMonk.otf
+fontsize: 10pt
+geometry: left=4cm,right=4cm,top=3cm,bottom=3cm
+header-includes:
+    ## Various Latex package imports
+    - \usepackage{multicol}  # Multiple column support
+    - \usepackage{lettrine}  # Easy way to make basic "drop caps" for chapter first paragraphs.
+    - \usepackage{bookmark}  # Allows fine control of bookmarks
+    - \usepackage{sectsty}   # Allows greater control of section styling
+    - \usepackage{fancyhdr}  # Easy and good looking headers/footers
+    ## Retain full depth navigation in heirarchical bookmarks
+    - \bookmarksetup{depth=1}
+    ## Remove all section numbering (prefixes)
+    - \setcounter{secnumdepth}{-2}
+    ## Limit depth to just part and chapter for TOC display
+    - \setcounter{tocdepth}{0}
+    ## Configure fancyhdr package
+    - \pagestyle{fancy}
+    - \fancyhf{}
+    - \lhead{\leftmark}
+    - \rhead{\rightmark}
+    - \cfoot{\thepage}
+    ## Tweak the appearance of chapter and section headings
+    - \chapterfont{\bf\centering}
+    - \sectionfont{\bf\centering\selectfont}
+    ## Configure lettrine "drop cap" line height
+    - \setcounter{DefaultLines}{2}
+    ## Configure column separator whitespace width and separator line
+    - \setlength{\columnseprule}{0.4pt}
+    - \setlength{\columnsep}{.5cm}
+    ## Hack to keep pandoc from barfing on "\begin" and "\end" tags needed
+    ## for multicol configuration
+    - \newcommand{\hideFromPandoc}[1]{#1}
+    - \hideFromPandoc{
+        \let\Begin\begin
+        \let\End\end
+      }
+documentclass: book
+classoption:
+    ## Suitable config for screen reading PDF
+    - openany
+    ## Uncomment "oneside" for a more natural book style, useful if PDF is going to be
+    ## printed on paper and made into a physical book.
+    # - oneside
+...
